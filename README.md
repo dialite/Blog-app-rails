@@ -61,8 +61,8 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- [PostgreSQL](https://www.postgresql.org/) installed and running
-- [Ruby on Rails](https://rubyonrails.org/) installed and running.
+- Install and run [PostgreSQL](https://www.postgresql.org/)
+- Install and run [Ruby on Rails](https://rubyonrails.org/).
 - To get more information on Ruby on Rails, read this detailed [installation guide](https://guides.rubyonrails.org/).
 
 ### Setup
