@@ -1,14 +1,5 @@
 <a name="readme-top"></a>
 
-<div align="center">
-
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -70,17 +61,28 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
+- [PostgreSQL](https://www.postgresql.org/) installed and running
+- [Ruby on Rails](https://rubyonrails.org/) installed and running.
+- To get more information on Ruby on Rails, read this detailed [installation guide](https://guides.rubyonrails.org/).
+
 ### Setup
 
 Clone this repository to your desired folder:
+
+git clone https://github.com/dialite/Blog-app-rails.git
 
 ### Install
 
 Install this project with:
 
+- bundle install
+- npm install
+
 ### Usage
 
 To run the project, execute the following command:
+
+rails s
 
 ### Run tests
 
