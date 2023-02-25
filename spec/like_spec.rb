@@ -17,19 +17,19 @@ RSpec.describe Like, type: :model do
     )
   end
 
-  object { Like.new(author: @user, post: @post) }
+  subject { Like.new(author: @user, post: @post) }
 
   it 'likes counter should be 2' do
     expect(@post.likes_counter).to eq 2
   end
 
   it 'should not be valid without a post' do
-    object.post = nil
-    expect(object).to_not be_valid
+    subject.post = nil
+    expect(subject).to_not be_valid
   end
 
   it 'should not be valid without an author' do
-    object.author = nil
-    expect(object).to_not be_valid
+    subject.author = nil
+    expect(subject).to_not be_valid
   end
 end
