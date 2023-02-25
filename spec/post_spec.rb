@@ -3,18 +3,18 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   before(:all) do
     @user = User.create(
-        name: 'Raymond',
-        photo: 'https://thekingchioce.game.jpg',
-        bio: 'I am the King',
-        posts_counter: 0
-      )
+      name: 'Raymond',
+      photo: 'https://thekingchioce.game.jpg',
+      bio: 'I am the King',
+      posts_counter: 0
+    )
     @post = Post.create(
-        title: 'Career Path',
-        text: 'Software Programmer',
-        author_id: @user.id,
-        comments_counter: 2,
-        likes_counter: 2
-      )
+      title: 'Career Path',
+      text: 'Software Programmer',
+      author_id: @user.id,
+      comments_counter: 2,
+      likes_counter: 2
+    )
   end
 
   it '@post as created is valid' do
@@ -51,7 +51,7 @@ RSpec.describe Post, type: :model do
     expect(@post).to_not be_valid
   end
 
-  it 'should not accept more than 100 character' do
+  it 'should not accept more than 250 character' do
     @post.title = '
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
     eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
@@ -62,10 +62,10 @@ RSpec.describe Post, type: :model do
 
   it 'should return a users last 5 comments' do
     user = User.create(
-        name: 'Raymond',
-        photo: 'https://thekingchioce.game.jpg',
-        bio: 'I am the King',
-        posts_counter: 0
+      name: 'Raymond',
+      photo: 'https://thekingchioce.game.jpg',
+      bio: 'I am the King',
+      posts_counter: 0
     )
     7.times.collect do
       Comment.create(text: 'Take it back', author_id: user.id, post_id: @post.id)
