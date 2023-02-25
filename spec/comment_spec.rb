@@ -17,19 +17,19 @@ RSpec.describe Comment, type: :model do
     )
   end
 
-  subject { Comment.new(text: 'Hi', author: @user, post: @post) }
+  object { Comment.new(text: 'Hi', author: @user, post: @post) }
 
-  it 'comments counter should be 1' do
+  it 'Comments counter should be 1' do
     expect(@post.comments_counter).to eq 1
   end
 
-  it 'should not valid without an author' do
-    subject.author = nil
-    expect(subject).to_not be_valid
+  it 'should not be valid without a post' do
+    object.post = nil
+    expect(object).to_not be_valid
   end
 
-  it 'should not valid without a post' do
-    subject.post = nil
-    expect(subject).to_not be_valid
+  it 'should not be valid without an author' do
+    object.author = nil
+    expect(object).to_not be_valid
   end
 end
