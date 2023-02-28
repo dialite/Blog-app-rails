@@ -7,4 +7,3 @@ class UsersController < ApplicationController
     @user_id = params[:id]
   end
 end
-  
