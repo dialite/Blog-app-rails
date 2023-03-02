@@ -86,7 +86,11 @@ rails s
 
 ### Run tests
 
-To run tests, run the following command:
+To run tests do the following and run the following command:
+
+- Add rspec-rails to both the :development and :test groups of your app’s Gemfile
+- bundle install
+- rails generate rspec:install
 
 ### Deployment
 
