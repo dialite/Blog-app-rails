@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', type: %w[request feature] do
+RSpec.describe 'UsersController', type: %w[request feature] do
   let!(:user) do
     User.create(
       name: 'Raymond',
