@@ -1,1 +1,12 @@
-<h1>User Profile</h1>
+<header>
+  <h1 class="title">User Profile</h1>
+</header>
+
+<%= render 'partials/user', user: @user %>
+
+<section class="bio">
+  <h2>User Bio</h2>
+  <p><%= @user.bio %></p>
+</section>
+
+<%= link_to "View all Posts", user_posts_path(@user) %>
