@@ -1,7 +1,9 @@
-<div>
-  <img src="<%= user.photo %>" alt= "Photo">
-  <div>
-    <h2><%= link_to(user.name, user_path(user))%></h2>
-    <p> Number of Posts: <%= user.posts_counter %></p>
+<link rel="stylesheet" href="/assets/user.css">
+
+<div class="user">
+  <%= image_tag('user.jpg', alt: 'User', class: 'user__image') %>
+  <div class="user__info">
+    <h2><%= link_to(user.name, user_path(user)) %></h2>
+    <p>Number of Posts: <%= user.posts_counter %></p>
   </div>
 </div>
