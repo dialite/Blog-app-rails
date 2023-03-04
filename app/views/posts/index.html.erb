@@ -1,1 +1,20 @@
-<h1>List of Users Posts</p>
+<header>
+  <h1 class= "title">List of User's Posts</h1>
+</header>
+
+<%# Renders partial view for the user section of the page, passing in the @user variable %>
+<%= render 'partials/user', user: @user %>
+
+<%# Loops through each of the user's recent posts and renders a partial view for each post, passing in the post variable %>
+<% @user_recent_posts.each do |post| %>
+  <%# Renders partial view for the post section of the page, passing in the post variable %>
+  <%= render 'partials/post', post: post %>
+
+    <ul class="comments">
+      <% post.recent_comments.each do |comment| %>
+         <%# A list item element with the author's name and the text of the comment %>
+        <li><%= comment.author.name %>: <%= comment.text %></li>
+        <% end %>
+    </ul>
+<% end %>
+<button>Pagination</button>
