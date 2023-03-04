@@ -1,7 +1,7 @@
 <% if post.comments.empty? %>
   <p>No comments yet.</p>
 <% else %>
-  <ul>
+  <ul class= "border-black">
     <%# If there are comments, display them inside an unordered list element. %>
     <% post.comments.each do |comment| %>
       <li><%= "#{comment.author.name}: #{comment.text}" %></li>
