@@ -1,1 +1,19 @@
-<h1>User Profile</h1>
+<header>
+  <h1 class="title">User Profile</h1>
+</header>
+
+<%# Renders partial view for the user section of the page, passing in the @user variable %>
+<%= render 'partials/user', user: @user_id %>
+
+<section class="bio">
+  <h2>User Bio</h2>
+  <p><%= @user_id.bio %></p>
+</section>
+
+<%# Loops through each of the user's recent posts and renders a partial view for each post, passing in the post variable %>
+<% @recent_posts.each do |post| %>
+  <%= render partial: 'partials/post', locals: { post: post} %>
+<% end %>
+
+<%# Creates a link to the user's posts page %>
+<%= link_to "See all Posts", user_posts_path(@user_id), class: "button" %>

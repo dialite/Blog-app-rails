@@ -1,0 +1,15 @@
+<!-- Adds a stylesheet link to a CSS file -->
+<link rel="stylesheet" href="/assets/user.css">
+
+<!-- Creates a section for user information -->
+<div class="user">
+  <%= link_to(image_tag('user.jpg', alt: 'User', class: 'user__image'), user_path(user)) %>
+
+  <!-- Displays user information together with number of posts-->
+  <%= link_to(user_path(user)) do %>
+    <div class="user__info">
+      <h2><%= user.name %></h2>
+      <p>Number of Posts: <%= user.posts_counter || 0 %></p>
+    </div>
+  <% end %>
+</div>
