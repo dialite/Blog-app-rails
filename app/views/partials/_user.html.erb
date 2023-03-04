@@ -3,11 +3,13 @@
 
 <!-- Creates a section for user information -->
 <div class="user">
-  <%= image_tag('user.jpg', alt: 'User', class: 'user__image') %>
-  
+  <%= link_to(image_tag('user.jpg', alt: 'User', class: 'user__image'), user_path(user)) %>
+
   <!-- Displays user information together with number of posts-->
-  <div class="user__info">
-    <h2><%= link_to(user.name, user_path(user)) %></h2>
-    <p>Number of Posts: <%= user.posts_counter || 0 %></p>
-  </div>
+  <%= link_to(user_path(user)) do %>
+    <div class="user__info">
+      <h2><%= user.name %></h2>
+      <p>Number of Posts: <%= user.posts_counter || 0 %></p>
+    </div>
+  <% end %>
 </div>
