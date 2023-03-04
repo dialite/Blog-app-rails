@@ -1,1 +1,14 @@
-<h1>Single Post View</p>
+<header>
+<h1 class= "title">Single Post View</h1>
+</header>
+
+<div class="single-post">
+  <div>
+    <h3>Post # <%= @post.id %> by <%= @post.author.name %></h3>
+    <p class="post-likes-comments">Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+  </div>
+  <p> <%= @post.text %></p>
+  <div class="comments">
+    <%= render "partials/comment", post: @post %>
+  </div>
+</div>
