@@ -3,12 +3,14 @@
 </header>
 
 <div class="single-post">
+
   <%# Contains the information about the post, including the post id and author name %>
   <div class="post-info">
     <h3>Post # <%= @post.id %> by <%= @post.author.name %></h3>
     <p class="post-likes-comments">Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
   </div>
   <p> <%= @post.text %></p>
+
   <%# Contains the comments for the post and renders the comment partial %>
   <div class="comments">
     <%= render "partials/comment", post: @post %>
