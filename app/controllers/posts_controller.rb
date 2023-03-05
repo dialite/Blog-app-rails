@@ -7,6 +7,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
+    @like = Like.new
   end
 
   private
@@ -27,10 +29,10 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html do
         if @post.save
-          flash[:success] = "Post successfully created"
+          flash[:success] = 'Post successfully created'
           redirect_to "/users/#{current_user.id}/posts/#{post.id}"
         else
-          flash.now[:error] = "Error: Post failed to save"
+          flash.now[:error] = 'Error: Post failed to save'
           render :new
         end
       end

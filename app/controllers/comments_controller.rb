@@ -6,10 +6,11 @@ class CommentsController < ApplicationController
       format.html do
         if @comment.save
           redirect_to user_post_comments_path(current_user, @comment.post_id)
-          flash[:success] = "Comment successfully created"
+          flash[:success] = 'Comment successfully created'
         else
           render :create
-          flash.now[:error] = "Error: Comment failed to save"
+          flash.now[:error] = 'Error: Comment failed to save'
+        end
       end
     end
   end
