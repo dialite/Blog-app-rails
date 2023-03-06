@@ -4,7 +4,17 @@
 
 <div>
   <%= form_with model: @post, url: user_posts_path, class: "post-form", method: :post, local: true do |form| %>
-    
+
+    <% if @post.errors.any? %>
+      <ul class="errors">
+        <% @post.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
     <div>
       <%= form.label :title, "Title"%>
       <%= form.text_field :title, placeholder: 'Enter post title', class:'title-input' %>
@@ -18,5 +28,6 @@
     <div>
       <%= form.submit 'Submit Post', class: 'button', id:'post-btn' %>
     <div>
+
   <% end %>
 </div>
