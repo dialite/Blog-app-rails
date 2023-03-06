@@ -15,4 +15,8 @@
   <div class="comments">
     <%= render "partials/comment", post: @post %>
   </div>
+ 
+  <%= render partial: "partials/comment-form", local: {user: @current_user.id, post: @post} %>
+  <%= render "partials/like-form", post: @post %>
+
 </div>
