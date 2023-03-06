@@ -18,8 +18,6 @@ class PostsController < ApplicationController
     @user_recent_posts = @user.recent_posts
   end
 
-  public
-
   def new
     @post = Post.new
   end
