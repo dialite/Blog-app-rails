@@ -1,5 +1,5 @@
 <div>
-  <%= form_with url:@post_likes_path, method: :post, local: true do |form| %>
+  <%= form_with url:user_post_likes_path(user_id: @post.author.id, post_id: @post.id), method: :post, local: true do |form| %>
     <%= form.hidden_field :author_id, value: @post.author.id %>
     <%= form.hidden_field :post_id, value: @post.id %>
     <%= form.submit "Like", disable_with: "Updating likes..." %>
