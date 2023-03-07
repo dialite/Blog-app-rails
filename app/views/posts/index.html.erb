@@ -11,7 +11,7 @@
   <%= render 'partials/post', post: post %>
 
     <ul class="comments">
-      <% post.recent_comments.each do |comment| %>
+      <% post.recent_comments.includes(:author).each do |comment| %>
          <%# A list item element with the author's name and the text of the comment %>
         <li><%= comment.author.name %>: <%= comment.text %></li>
         <% end %>
