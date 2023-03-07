@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   def new
     @comment = Comment.new
     @post = Post.find(params[:id])
-    @user = User.find(params[user_id])
+    @user = User.find(params[:user_id])
   end
 
   def create
@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
 
   def comment_params
     if params.key?(:comment)
-      params.require(:comment).permit(:text, :author_id, :post_id)
+      params.require(:comment).permit(:text)
     else
       {}
     end

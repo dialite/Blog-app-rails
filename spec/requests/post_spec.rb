@@ -26,7 +26,7 @@ RSpec.describe 'PostsController', type: %w[request feature] do
     end
 
     it 'response body includes correct placeholder text' do
-      expect(response.body).to include('List of Users Posts')
+      expect(response.body).to include('List of User\'s Posts')
     end
   end
 
