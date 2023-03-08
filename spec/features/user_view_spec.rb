@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Index page', type: :system do
+RSpec.describe 'User', type: :system do
   describe 'index page' do
 
     # Run before each test case
@@ -41,6 +41,7 @@ RSpec.describe 'Index page', type: :system do
       expect(page).to have_content('Software Developer')
     end
   end
+  
 
   # Test block for user show page
   describe 'show page' do
