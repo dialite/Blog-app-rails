@@ -83,6 +83,7 @@ RSpec.describe 'Post', type: :system do
       end
     end
 
+    # Test block for post show page
     describe 'show page' do
       it 'should show who wrote the post.' do
         visit user_post_path(@user.id, @post_first.id)
