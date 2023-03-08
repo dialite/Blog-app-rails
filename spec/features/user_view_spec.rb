@@ -2,15 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'User', type: :system do
   describe 'index page' do
-
     # Run before each test case
     before(:each) do
-      @user = User.create(
-        name: 'Raymond',
-        bio: 'Software Developer',
-        photo: 'http://myviews.com/org.jpg',
-        posts_counter: 1
-      )
+      @user = User.create(name: 'Raymond', bio: 'Software Developer', photo: 'http://myviews.com/org.jpg',
+                          posts_counter: 1)
     end
 
     it 'should show the username of the users' do
@@ -32,7 +27,6 @@ RSpec.describe 'User', type: :system do
     end
 
     it 'should redirect to users show page when a user is clicked' do
-
       # Visit the show page of the user
       visit user_path(@user.id)
 
@@ -41,30 +35,27 @@ RSpec.describe 'User', type: :system do
       expect(page).to have_content('Software Developer')
     end
   end
-  
+
 
   # Test block for user show page
   describe 'show page' do
     before(:each) do
-      @user =
-        User.create(
-          name: 'Raymond',
-          bio: 'Software Developer',
-          photo: 'http://myviews.com/org.jpg',
-          posts_counter: 0
-        )
+      @user = User.create(name: 'Raymond', bio: 'Software Developer', photo: 'http://myviews.com/org.jpg',
+                          posts_counter: 0)
 
       # Create post instances with required parameters
-      @post = Post.create(title: 'User first post', text: 'Sport', author_id: @user.id, comments_counter: 0,
-                          likes_counter: 0)
-      @post_second = Post.create(title: 'User second post', text: 'Entertainment', author_id: @user.id, comments_counter: 0,
-                              likes_counter: 0)
-      @post_third = Post.create(title: 'User third post', text: 'Politics', author_id: @user.id, comments_counter: 0,
-                              likes_counter: 0)
+      @post =
+        Post.create(title: 'User first post', text: 'Sport', author_id: @user.id, comments_counter: 0,
+                    likes_counter: 0)
+      @post_second =
+        Post.create(title: 'User second post', text: 'Entertainment', author_id: @user.id, comments_counter: 0,
+                    likes_counter: 0)
+      @post_third =
+        Post.create(title: 'User third post', text: 'Politics', author_id: @user.id, comments_counter: 0,
+                    likes_counter: 0)
     end
 
     it "should contain users's profile picture." do
-
       # Expect the page to have an image selector
       page.has_selector?('img')
     end

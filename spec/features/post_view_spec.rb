@@ -3,33 +3,32 @@ require 'rails_helper'
 RSpec.describe 'Post', type: :system do
   describe 'content' do
     before(:each) do
-      @user = 
-        User.create(
-          name: 'Raymond',
-          bio: 'Software Developer',
-          photo: 'http://myviews.com/org.jpg',
-          posts_counter: 0
-        )
-      @post_first = Post.create(title: 'Technology', text: 'Latest technological trends', author_id: @user.id, comments_counter: 0,
-                          likes_counter: 0)
-      @post_second = Post.create(title: 'Sports', text: 'First class football clubs', author_id: @user.id, comments_counter: 0,
-                              likes_counter: 0)
-      @post_third = Post.create(title: 'Programming', text: 'Favourite programming language', author_id: @user.id, comments_counter: 0,
-                              likes_counter: 0)
+      @user =
+        User.create(name: 'Raymond', bio: 'Software Developer', photo: 'http://myviews.com/org.jpg',
+                    posts_counter: 0)
+      @post_first =
+        Post.create(title: 'Technology', text: 'Latest technological trends', author_id: @user.id,
+                    comments_counter: 0, likes_counter: 0)
+      @post_second =
+        Post.create(title: 'Sports', text: 'First class football clubs', author_id: @user.id,
+                    comments_counter: 0, likes_counter: 0)
+      @post_third =
+        Post.create(title: 'Programming', text: 'Favourite programming language', author_id: @user.id,
+                    comments_counter: 0, likes_counter: 0)
       Comment.create(text: 'The 5G technology is a master piece', author_id: @user.id, post_id: @post_first.id)
       Comment.create(text: 'I admire latest technological innovations', author_id: @user.id, post_id: @post_first.id)
       Comment.create(text: 'European football clubs are very good', author_id: @user.id, post_id: @post_second.id)
       Comment.create(text: 'Financial capacity also define class', author_id: @user.id, post_id: @post_second.id)
-      Comment.create(text: 'Python is a cool language with english syntax', author_id: @user.id, post_id: @post_third.id)
+      Comment.create(text: 'Python is a cool language with english syntax', author_id: @user.id,
+                     post_id: @post_third.id)
       Comment.create(text: 'I am currently enjoying Ruby on Rails', author_id: @user.id, post_id: @post_third.id)
       Like.create(post_id: @post_first.id, author_id: @user.id)
       Like.create(post_id: @post_second.id, author_id: @user.id)
       Like.create(post_id: @post_third.id, author_id: @user.id)
     end
-    
+
     describe 'index page' do
       it "should show user's profile picture." do
-
         # Expect the page to have an image selector
         page.has_selector?('img')
       end
@@ -84,39 +83,39 @@ RSpec.describe 'Post', type: :system do
       end
     end
 
-    
+
     describe 'show page' do
-      it 'I can see who wrote the post.' do
+      it 'should show who wrote the post.' do
         visit user_post_path(@user.id, @post_first.id)
         expect(page).to have_content('Raymond')
       end
 
-      it "I can see the post's title." do
+      it "should show the post's title." do
         visit user_post_path(@user.id, @post_first.id)
         expect(page).to have_content('Technology')
       end
 
-      it 'I can see the post body.' do
+      it 'should show the post body.' do
         visit user_post_path(@user.id, @post_first.id)
         expect(page).to have_content('Latest technological trends')
       end
 
-      it 'I can see how many comments a post has.' do
+      it 'should show how many comments a post has.' do
         visit user_post_path(@user.id, @post_first.id)
         expect(page).to have_content('Comments: 2')
       end
 
-      it 'I can see how many likes it has.' do
+      it 'should show how many likes it has.' do
         visit user_post_path(@user.id, @post_first.id)
         expect(page).to have_content('Likes: 1')
       end
 
-      it 'I can see the username of each commentor.' do
+      it 'should show the username of each commentor.' do
         visit user_post_path(@user.id, @post_first.id)
         expect(page).to have_content('Raymond')
       end
 
-      it 'I can see the comment each commentor left.' do
+      it 'should show the comment each commentor left.' do
         visit user_post_path(@user.id, @post_first.id)
         expect(page).to have_content('I admire latest technological innovations')
       end
