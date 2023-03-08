@@ -138,7 +138,7 @@ If you like this project give a ⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank:
+I would like to thank my coding partner.
 
 - **Microverse**
 
