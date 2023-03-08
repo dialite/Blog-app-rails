@@ -36,7 +36,6 @@ RSpec.describe 'User', type: :system do
     end
   end
 
-
   # Test block for user show page
   describe 'show page' do
     before(:each) do
