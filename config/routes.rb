@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     get 'users/sign_out' => 'devise/sessions#destroy'
   end
 
+  devise_for controllers: { registrations: 'registrations' }
+
   # Defines the root path route ("/")
   # root "articles#index"
   root 'users#index'
