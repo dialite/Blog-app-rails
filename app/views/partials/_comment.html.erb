@@ -3,7 +3,7 @@
 <% else %>
   <ul class= "border-black">
     <%# If there are comments, display them inside an unordered list element. %>
-    <% post.comments.each do |comment| %>
+    <% post.comments.includes(:author).each do |comment| %>
       <li><%= "#{comment.author.name}: #{comment.text}" %></li>
     <% end %>
   </ul>

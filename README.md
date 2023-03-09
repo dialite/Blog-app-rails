@@ -9,7 +9,6 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -40,14 +39,6 @@
 
 - **create tables for Users, posts, comments, and likes**
 - **setup foreign key references**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link link is not available]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,6 +99,12 @@ You can deploy this project using:
 - Twitter: [@raymondolisa01](https://twitter.com/raymondolisa01)
 - LinkedIn: [Raymond Olisa](https://www.linkedin.com/in/raymond-olisa-775929243/)
 
+👤 **Hevar kas**
+
+- GitHub: [@githubhandle](https://github.com/whiteWolfx99)
+- Twitter: [@twitterhandle](#)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hevar-hoshang-9a7a68237/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -141,7 +138,7 @@ If you like this project give a ⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank:
+I would like to thank my coding partner.
 
 - **Microverse**
 
