@@ -39,11 +39,11 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    puts "You are deleting this post"
     @post.destroy
     current_user.posts_counter -= 1
     current_user.save
     redirect_to user_path(current_user.id)
+    puts 'You are deleting this post'
   end
 
   private
