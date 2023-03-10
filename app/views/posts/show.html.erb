@@ -20,4 +20,10 @@
   <%= render partial: "partials/comment-form", local: {user: @current_user.id, post: @post} %>
   <%= render "partials/like-form", post: @post %>
 
+  <% if can? :destroy, @post %>
+    <%= form_with url: user_post_path(@current_user.id, @post.id), method: :delete do |f| %>
+      <%= f.submit 'Delete post', class: 'post-delete-button' %>
+    <% end %>
+  <% end %>
+
 </div>
