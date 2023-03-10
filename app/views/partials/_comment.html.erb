@@ -4,7 +4,19 @@
   <ul class= "border-black">
     <%# If there are comments, display them inside an unordered list element. %>
     <% post.comments.includes(:author).each do |comment| %>
-      <li><%= "#{comment.author.name}: #{comment.text}" %></li>
-    <% end %>
+    <li class="comment-list">
+      <div class="comment-content">
+        <p><%= "#{comment.author.name}: #{comment.text}" %></p>
+      </div>
+      <% if can? :destroy, comment %>
+        <div class="delete-button-container">
+          <%= form_with url: user_post_comment_path(post.author.id, @post.id, comment.id), :method => :delete do |f| %>
+            <%= f.submit 'Delete comment', class: 'delete-button' %>
+          <% end %>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
   </ul>
 <% end %>
+
