@@ -5,17 +5,17 @@
 
   <div class="field form-items">
     <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Username", class: "form-fields border-black form-title" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Username" %>
   </div>
 
   <div class="field form-items">
     <%= f.label :bio %><br />
-    <%= f.text_field :bio, autofocus: true, autocomplete: "bio", placeholder: "Biography", class: "form-fields border-black form-title" %>
+    <%= f.text_field :bio, autofocus: true, autocomplete: "bio", placeholder: "Biography" %>
   </div>
 
   <div class="field form-items">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-fields border-black form-title" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
   </div>
 
   <div class="field form-items">
@@ -23,13 +23,12 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-fields border-black form-title" %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
   </div>
 
   <div class="field form-items">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Confirm password",
-    class: "form-fields border-black form-title"%>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm password" %>
   </div>
 
   <div class="actions">
