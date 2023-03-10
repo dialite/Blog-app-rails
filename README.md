@@ -15,7 +15,6 @@
     - [Install](#install)
     - [Usage](#usage)
     - [Run tests](#run-tests)
-    - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -83,12 +82,6 @@ To run tests do the following and run the following command:
 - bundle install
 - rails generate rspec:install
 
-### Deployment
-
-You can deploy this project using:
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
@@ -102,7 +95,6 @@ You can deploy this project using:
 👤 **Hevar kas**
 
 - GitHub: [@githubhandle](https://github.com/whiteWolfx99)
-- Twitter: [@twitterhandle](#)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hevar-hoshang-9a7a68237/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
