@@ -102,7 +102,6 @@ You can deploy this project using:
 👤 **Hevar kas**
 
 - GitHub: [@githubhandle](https://github.com/whiteWolfx99)
-- Twitter: [@twitterhandle](#)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hevar-hoshang-9a7a68237/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
