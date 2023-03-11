@@ -95,6 +95,7 @@ To run tests do the following and run the following command:
 👤 **Hevar kas**
 
 - GitHub: [@githubhandle](https://github.com/whiteWolfx99)
+- Twitter: [@whitewolf](#)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hevar-hoshang-9a7a68237/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
