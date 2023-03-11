@@ -24,9 +24,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Blog-App] <a name="about-project"></a>
+# 📖 [Social-media-App] <a name="about-project"></a>
 
-**[Blog-App]** Blog app can be briefly described as a classic example of a blog website. It is a functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
+**[Social-media-App]** Briefly put, a blog application is a traditional illustration of a blog website. This website serves its purpose by displaying a list of posts and enabling users to engage with them by leaving comments and liking posts.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -95,6 +95,7 @@ To run tests do the following and run the following command:
 👤 **Hevar kas**
 
 - GitHub: [@githubhandle](https://github.com/whiteWolfx99)
+- Twitter: [@whitewolf](#)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hevar-hoshang-9a7a68237/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
