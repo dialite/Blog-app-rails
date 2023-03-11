@@ -24,9 +24,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Blog-App] <a name="about-project"></a>
+# 📖 [Social-media-App] <a name="about-project"></a>
 
-**[Blog-App]** Briefly put, a blog application is a traditional illustration of a blog website. This website serves its purpose by displaying a list of posts and enabling users to engage with them by leaving comments and liking posts.
+**[Social-media-App]** Briefly put, a blog application is a traditional illustration of a blog website. This website serves its purpose by displaying a list of posts and enabling users to engage with them by leaving comments and liking posts.
 
 ## 🛠 Built With <a name="built-with"></a>
 
