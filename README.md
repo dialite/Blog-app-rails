@@ -26,7 +26,7 @@
 
 # 📖 [Blog-App] <a name="about-project"></a>
 
-**[Blog-App]** Blog app can be briefly described as a classic example of a blog website. It is a functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
+**[Blog-App]** Briefly put, a blog application is a traditional illustration of a blog website. This website serves its purpose by displaying a list of posts and enabling users to engage with them by leaving comments and liking posts.
 
 ## 🛠 Built With <a name="built-with"></a>
 
